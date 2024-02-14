@@ -39,7 +39,7 @@ const FormForInsertingDataModal = ({ onClick }: Props) => {
           data-bs-target="#exampleModal"
         >
           {" "}
-          Launch demo modal{" "}
+          Add New Record{" "}
         </button>
       </p>
       {/* <!-- Modal --> */}

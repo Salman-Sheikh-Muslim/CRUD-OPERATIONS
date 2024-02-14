@@ -20,7 +20,6 @@ const FormForShowingDataModal = ({ person }: Props) => {
       prevPersons.filter((_, ind) => ind !== index)
     );
   };
-  // Call handleAddPerson whenever a new person object is received
 
   return (
     <>
@@ -37,6 +36,7 @@ const FormForShowingDataModal = ({ person }: Props) => {
                 <td>{person.personName}</td>
                 <td>{person.gender}</td>
                 <td>{person.dOB}</td>
+                <td></td>
                 <td>
                   <button
                     className="btn btn-primary "
