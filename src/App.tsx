@@ -20,17 +20,25 @@ function App() {
   });
 
   const handleSetObject = (person: objectShape) => {
+    // const updatedPerson = {
+    //   personName: person.personName || "",
+    //   gender: person.gender || "",
+    //   dOB: person.dOB || "",
+    // };
+
     setObject({ ...person });
-    console.log("From App: " + person.personName);
+    console.log(
+      "From App: " + person.personName + " " + person.gender + " " + person.dOB
+    );
   };
 
   return (
     <>
-      {/* <FormForInsertingData onClick={handleSetObject}></FormForInsertingData>
-      <FormForShowingDataNew person={personObject} /> */}
+      <FormForInsertingData onClick={handleSetObject}></FormForInsertingData>
+      <FormForShowingDataNew person={personObject} />
 
-      <FormForInsertingDataModal onClick={handleSetObject} />
-      <FormForShowingDataModal person={personObject} />
+      {/* <FormForInsertingDataModal onClick={handleSetObject} />
+      <FormForShowingDataModal person={personObject} /> */}
     </>
   );
 }

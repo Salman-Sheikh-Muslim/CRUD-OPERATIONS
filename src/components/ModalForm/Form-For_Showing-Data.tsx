@@ -18,7 +18,7 @@ const FormForShowingDataModal = ({ person }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    if (person.personName !== "")
+    if (person.personName !== "" || person.gender !== "" || person.dOB !== "")
       setPersonsArray((prevPersons) => [...prevPersons, person]);
   }, [person]);
 
@@ -53,6 +53,8 @@ const FormForShowingDataModal = ({ person }: Props) => {
     }
   };
 
+  console.log(personsArray);
+
   return (
     <>
       <table>
@@ -65,9 +67,9 @@ const FormForShowingDataModal = ({ person }: Props) => {
           {personsArray.length > 0 &&
             personsArray.map((person, index) => (
               <tr key={index}>
-                <td>{person.personName}</td>
-                <td>{person.gender}</td>
-                <td>{person.dOB}</td>
+                <td>{person.personName || "-"}</td>
+                <td>{person.gender || "-"}</td>
+                <td>{person.dOB || "-"}</td>
                 <td></td>
                 <td>
                   <button
