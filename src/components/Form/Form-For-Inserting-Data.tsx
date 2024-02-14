@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { objectShape } from "../App";
+import { objectShape } from "../../App";
 
 interface Props {
   onClick: (person: objectShape) => void;

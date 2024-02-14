@@ -1,3 +1,7 @@
 body{
   padding: 20px;
 }
+
+ th, td {
+  padding: 5px 30px; /* Adjust the value as needed */
+}
